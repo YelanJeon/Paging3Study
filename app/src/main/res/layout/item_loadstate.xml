@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ProgressBar
+        android:id="@+id/pb_loadstate"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <TextView
+        android:id="@+id/tv_loadstate"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:text="message"
+        android:textColor="#000"
+        android:textSize="14dp"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toStartOf="@id/btn_loadstate"
+        app:layout_constraintStart_toEndOf="@id/pb_loadstate"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/btn_loadstate"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="retry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

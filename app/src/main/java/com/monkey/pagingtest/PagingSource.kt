@@ -1,12 +1,19 @@
 package com.monkey.pagingtest
 
 import androidx.paging.PagingState
+import kotlin.random.Random
 
 class PagingSource (
     private val service: SampleBackendService
         ) : androidx.paging.PagingSource<Int, String>() {
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, String> {
         return try {
+            //일정 확률로 에러 발생시키기
+            val random = Random.nextFloat()
+            if(random < 0.5) {
+                throw java.lang.Exception("ERROR")
+            }
+
             val currentPage = params.key ?: 0
             val response = service.getPagingData(currentPage)  //서버로부터 데이터를 받아온다.
 

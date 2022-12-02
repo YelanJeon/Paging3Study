@@ -20,6 +20,27 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_refresh" />
+
+    <TextView
+        android:id="@+id/empty"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="Can't load first data!!\nClick refresh button ↓"
+        android:textColor="#AAA"
+        app:layout_constraintStart_toStartOf="@id/rcv_list"
+        app:layout_constraintEnd_toEndOf="@id/rcv_list"
+        app:layout_constraintTop_toTopOf="@id/rcv_list"
+        app:layout_constraintBottom_toBottomOf="@id/rcv_list" />
+
+    <Button
+        android:id="@+id/btn_refresh"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="refresh"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
